@@ -1,0 +1,39 @@
+{
+    "name": "lamesya/freshsales",
+    "description": "Freshsales API client for PHP and/or Laravel",
+    "type": "library",
+    "keywords": ["Freshsales", "api", "client", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joel Bije",
+            "email": "kumag223@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~7.0|~6.0|~5.0|~4.0",
+        "illuminate/support": "^10.0",
+        "laravel/helpers": "^1.0",
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^2.7",
+        "phpunit/phpunit": "^11.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lamesya\\Freshsales\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lamesya\\Freshsales\\FreshsalesServiceProvider"
+            ],
+            "aliases": {
+                "Freshsales": "Lamesya\\Freshsales\\FreshsalesFacade"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
